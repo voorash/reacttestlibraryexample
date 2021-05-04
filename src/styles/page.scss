@@ -1,0 +1,24 @@
+.page {
+  display: grid;
+  grid-column-gap: 0.8rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(30, auto);
+
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  width: 100%;
+
+  &__filters {
+    background: white;
+    grid-column: 1 / 4;
+    grid-row: 1;
+    padding: 1rem;
+  }
+
+  &__results {
+    grid-column: 4 / 13;
+    grid-row: 1;
+    padding: 0 1rem;
+  }
+}

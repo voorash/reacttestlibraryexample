@@ -1,0 +1,82 @@
+.movie {
+  background: white;
+  margin: 0 0 2rem 0;
+  padding-bottom: 0.01rem;
+
+  &__actors {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      &-item {
+        grid-row: 1;
+        list-style: none;
+
+        @for $i from 1 to 3 {
+          &:nth-of-type(#{$i}) {
+            grid-column: $i;
+          }
+        }
+      }
+    }
+  }
+
+  &__fun-facts {
+    background: #ccc;
+    font-size: 0.7rem;
+    font-style: italic;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  &__locations {
+    &-list {
+      &-item {
+        list-style-type: square;
+        list-style-position: inside;
+      }
+    }
+  }
+
+  &__release-year {
+    display: inline-block;
+    font-size: 80%;
+    font-style: italic;
+    margin-left: 1rem;
+    vertical-align: 10%;
+
+    &:before {
+      content: '(';
+    }
+
+    &:after {
+      content: ')';
+    }
+  }
+
+  &__section {
+    margin: 1rem 0;
+    padding: 0;
+
+    &-title {
+      border-bottom: 1px solid black;
+      display: block;
+      margin: 0 1.5rem;
+      width: calc(100% - 3rem);
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  &__title {
+    background: #444;
+    color: #eee;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+}
